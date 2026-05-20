@@ -1,0 +1,14 @@
+# Datasets (too large for GitHub)
+datasets/
+
+# VS Code settings
+.vscode/
+
+# Windows junk
+Thumbs.db
+desktop.ini
+
+# SQL Server files
+*.mdf
+*.ldf
+*.bak
