@@ -100,3 +100,63 @@ CREATE TABLE bronze.erp_px_cat_g1v2 (
     maintenance  NVARCHAR(50)
 );
 GO
+
+-- =============================================================
+-- Load Bronze Tables (BULK INSERT from CSV files)
+-- =============================================================
+
+-- CRM Tables
+BULK INSERT bronze.crm_cust_info
+FROM 'D:\sql-data-warehouse-project\datasets\source_crm\cust_info.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    TABLOCK
+);
+GO
+
+BULK INSERT bronze.crm_prd_info
+FROM 'D:\sql-data-warehouse-project\datasets\source_crm\prd_info.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    TABLOCK
+);
+GO
+
+BULK INSERT bronze.crm_sales_details
+FROM 'D:\sql-data-warehouse-project\datasets\source_crm\sales_details.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    TABLOCK
+);
+GO
+
+-- ERP Tables
+BULK INSERT bronze.erp_cust_az12
+FROM 'D:\sql-data-warehouse-project\datasets\source_erp\CUST_AZ12.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    TABLOCK
+);
+GO
+
+BULK INSERT bronze.erp_loc_a101
+FROM 'D:\sql-data-warehouse-project\datasets\source_erp\LOC_A101.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    TABLOCK
+);
+GO
+
+BULK INSERT bronze.erp_px_cat_g1v2
+FROM 'D:\sql-data-warehouse-project\datasets\source_erp\PX_CAT_G1V2.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    TABLOCK
+);
+GO
