@@ -16,8 +16,10 @@ This project demonstrates end-to-end data warehouse development including:
 ---
 
 ## Architecture
+```
 Bronze Layer → Silver Layer → Gold Layer
 (Raw Data)     (Cleaned)      (Star Schema)
+```
 
 ### Medallion Architecture
 - **Bronze** — Raw data loaded as-is from CSV source files (CRM + ERP)
@@ -58,6 +60,7 @@ to both dimension tables, plus sales amount, quantity, and price.
 ---
 
 ## Project Structure
+```
 sql-data-warehouse/
 │
 ├── datasets/               # Source CSV files (CRM + ERP) - local only
@@ -73,7 +76,7 @@ sql-data-warehouse/
 ├── tests/
 │   └── quality_checks.sql         # Data quality validation
 └── README.md
-
+```
 ---
 
 ## How to Run
